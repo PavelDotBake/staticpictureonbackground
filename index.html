@@ -14,17 +14,19 @@
     <script>
     var canvas = document.getElementById('unity-canvas');
     
-    if (window.innerHeight > window.innerWidth) {
+    if (document.documentElement.clientHeight > document.documentElement.clientWidth) {
         
-        canvas.width = window.innerHeight;
-        canvas.height = window.innerWidth;
+        canvas.width = document.documentElement.clientHeight;
+        canvas.height = document.documentElement.clientWidth;
         
     } else {
         
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
+        canvas.width = document.documentElement.clientWidth;
+        canvas.height = document.documentElement.clientHeight;
+        
     }
     </script>
+    
     
     <script src="Build/MouseHomeWebGl.loader.js"></script>
     <script>
@@ -42,13 +44,13 @@
     </script>
     
     <script>
-    if (window.innerHeight > window.innerWidth) {
+    if (document.documentElement.clientHeight > document.documentElement.clientWidth) {
         
         var canvas = document.getElementById('unity-canvas');
         canvas.style.transform = "rotate(90deg)";
         
         var d = document.getElementById('unity-div');
-        d.style.transform = "translate(" + ((window.innerWidth-window.innerHeight)/2) + "px," + ((window.innerHeight-window.innerWidth)/2) + "px)";
+        d.style.transform = "translate(" + ((document.documentElement.clientWidth-document.documentElement.clientHeight)/2) + "px," + ((document.documentElement.clientHeight-document.documentElement.clientWidth)/2) + "px)";
     }
     </script>
     
@@ -60,21 +62,22 @@
         var canvas = document.getElementById('unity-canvas');
         var d = document.getElementById('unity-div');
     
-        if (window.innerHeight > window.innerWidth) {
+        if (document.documentElement.clientHeight > document.documentElement.clientWidth) {
             
-            canvas.width = window.innerHeight;
-            canvas.height = window.innerWidth;
+            canvas.width = document.documentElement.clientHeight;
+            canvas.height = document.documentElement.clientWidth;
             
             canvas.style.transform = "rotate(90deg)";
-            d.style.transform = "translate(" + ((window.innerWidth-window.innerHeight)/2) + "px," + ((window.innerHeight-window.innerWidth)/2) + "px)";
+            d.style.transform = "translate(" + ((document.documentElement.clientWidth-document.documentElement.clientHeight)/2) + "px," + ((document.documentElement.clientHeight-document.documentElement.clientWidth)/2) + "px)";
 
         } else {
             
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
+            canvas.width = document.documentElement.clientWidth;
+            canvas.height = document.documentElement.clientHeight;
             
             canvas.style.transform = "rotate(0deg)";
             d.style.transform = "translate(0px,0px)";
+
         }
         
         window.scrollTo(0, 0);
