@@ -1,0 +1,68 @@
+<!--
+<iframe id="frameForDemo" src="https://dotbake.com/demo" frameborder="0" scrolling="no"></iframe>
+
+<script>
+
+var frame = document.getElementById("frameForDemo");
+
+if (document.documentElement.clientWidth >= 1200)
+{
+    frame.width = 592;
+    frame.height = 444;
+
+} else {
+
+    frame.width = 500;
+    frame.height = 375;
+}
+
+</script>
+
+-->
+
+<div style="cursor: pointer;">
+
+    <img id="backgroundPictureDemoDesctop" src="https://paveldotbake.github.io/staticpictureonbackground/preview.jpg" style="position: absolute;"/>
+    <iframe id="frameForDemoDesctop" src="https://dotbake.com/demo" frameborder="0" scrolling="no" style="position: absolute; visibility: hidden;"></iframe>
+    <img id="buttonPlayDemoDesctop" src="https://paveldotbake.github.io/staticpictureonbackground/playVideo.png" style="position: absolute;"/>
+</div>
+
+<script>
+
+var backgroundPictureDesctopDemoVar = document.getElementById("backgroundPictureDemoDesctop");
+var frameForDemoVar = document.getElementById("frameForDemoDesctop");
+var buttonPlayDesctopDemoVar = document.getElementById("buttonPlayDemoDesctop");
+
+if (document.documentElement.clientWidth >= 1200)
+{
+    frameForDemoVar.width = 592;
+    frameForDemoVar.height = 444;
+    
+    backgroundPictureDesctopDemoVar.width = 592;
+    backgroundPictureDesctopDemoVar.height = 444;
+    
+    buttonPlayDesctopDemoVar.width = 592;
+    buttonPlayDesctopDemoVar.height = 444;
+
+} else {
+
+    frameForDemoVar.width = 500;
+    frameForDemoVar.height = 375;
+    
+    backgroundPictureDesctopDemoVar.width = 500;
+    backgroundPictureDesctopDemoVar.height = 375;
+    
+    buttonPlayDesctopDemoVar.width = 500;
+    buttonPlayDesctopDemoVar.height = 375;
+}
+
+
+buttonPlayDesctopDemoVar.addEventListener("click", function(event) { 
+    backgroundPictureDesctopDemoVar.style.visibility = "hidden";
+    buttonPlayDesctopDemoVar.style.visibility = "hidden";
+    frameForDemoVar.style.visibility = "visible";
+    
+});
+
+</script>
+
