@@ -27,3 +27,4 @@ videoDesctop.addEventListener("click", function(event) {
         
     }
 });
+</script>
