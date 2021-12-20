@@ -1,0 +1,59 @@
+<div style="cursor: pointer;">
+
+    <img id="backgroundPictureDesctop" src="https://paveldotbake.github.io/staticpictureonbackground/preview.jpg" style="position: absolute;"/>
+    
+    <video id="videoAboutUsDesctop" reload="auto" playsinline muted style="position: absolute; border:none;">
+        <source src="https://paveldotbake.github.io/staticpictureonbackground/team.mp4" type="video/mp4">
+    </video>
+    
+    <img id="buttonPlayDesctop" src="https://paveldotbake.github.io/staticpictureonbackground/playVideo.png" style="position: absolute;"/>
+</div>
+
+<script>
+
+var backgroundPictureDesctopVar = document.getElementById("backgroundPictureDesctop");
+var videoAboutUsDesctopVar = document.getElementById("videoAboutUsDesctop");
+var buttonPlayDesctopVar = document.getElementById("buttonPlayDesctop");
+
+if (document.documentElement.clientWidth >= 1200)
+{
+    backgroundPictureDesctopVar.width = 592;
+    backgroundPictureDesctopVar.height = 333;
+    
+    videoAboutUsDesctopVar.width = 592;
+    videoAboutUsDesctopVar.height = 333;
+    
+    buttonPlayDesctopVar.width = 592;
+    buttonPlayDesctopVar.height = 333;
+    
+} else {
+    
+    backgroundPictureDesctopVar.width = 496;
+    backgroundPictureDesctopVar.height = 279;
+    
+    videoAboutUsDesctopVar.width = 496;
+    videoAboutUsDesctopVar.height = 279;
+    
+    buttonPlayDesctopVar.width = 496;
+    buttonPlayDesctopVar.height = 279;
+    
+}
+
+videoAboutUsDesctopVar.addEventListener("click", function(event) { 
+    if (videoAboutUsDesctopVar.paused == true) {
+        videoAboutUsDesctopVar.play();
+        
+    } else {
+        videoAboutUsDesctopVar.pause();
+        
+    }
+});
+
+buttonPlayDesctopVar.addEventListener("click", function(event) { 
+    backgroundPictureDesctop.style.visibility = "hidden";
+    buttonPlayDesctopVar.style.visibility = "hidden";
+    videoAboutUsDesctopVar.play();
+    
+});
+
+</script>
