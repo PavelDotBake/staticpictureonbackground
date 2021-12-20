@@ -1,0 +1,44 @@
+<div style="cursor: pointer;">
+
+    <img id="backgroundPictureMobile" src="https://paveldotbake.github.io/staticpictureonbackground/preview.jpg" style="position: absolute;"/>
+    
+    <video id="videoAboutUsMobile" reload="auto" playsinline muted style="position: absolute; border:none;" frameborder="0">
+        <source src="https://paveldotbake.github.io/staticpictureonbackground/team.mp4" type="video/mp4">
+    </video>
+    
+    <img id="buttonPlayMobile" src="https://paveldotbake.github.io/staticpictureonbackground/playVideo.png" style="position: absolute;"/>
+</div>
+
+<script>
+
+var backgroundPictureMobileVar = document.getElementById("backgroundPictureMobile");
+var videoAboutUsMobileVar = document.getElementById("videoAboutUsMobile");
+var buttonPlayMobileVar = document.getElementById("buttonPlayMobile");
+
+backgroundPictureMobileVar.width = document.documentElement.clientWidth;
+backgroundPictureMobileVar.height = document.documentElement.clientWidth/16*9;
+    
+videoAboutUsMobileVar.width = document.documentElement.clientWidth;
+videoAboutUsMobileVar.height = document.documentElement.clientWidth/16*9;
+    
+buttonPlayMobileVar.width = document.documentElement.clientWidth;
+buttonPlayMobileVar.height = document.documentElement.clientWidth/16*9;
+ 
+videoAboutUsMobileVar.addEventListener("click", function(event) { 
+    if (videoAboutUsMobileVar.paused == true) {
+        videoAboutUsMobileVar.play();
+        
+    } else {
+        videoAboutUsMobileVar.pause();
+        
+    }
+});
+
+buttonPlayMobileVar.addEventListener("click", function(event) { 
+    buttonPlayMobileVar.style.visibility = "hidden";
+    backgroundPictureMobile.style.visibility = "hidden";
+    videoAboutUsMobileVar.play();
+    
+});
+
+</script>
